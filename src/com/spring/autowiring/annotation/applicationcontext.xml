@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+  
+  <bean id="studentbean" class=" com.spring.autowiring.annotation.Student">  
+	
+	<property name="id" value="101"/>
+	<property name="roll" value="501"/>
+	<property name="name" value="yash"/>
+	
+<!-- 	<constructor-arg value="101"/>
+	<constructor-arg value="501"/>
+	<constructor-arg value="yash"/> -->
+
+</bean> 
+<bean  class="com.spring.autowiring.annotation.Address" id="address1">  
+
+<property name="city" value="dhar"/> 
+
+</bean> 
+<bean  class="com.spring.autowiring.annotation.Address" id="address2">  
+
+<property name="city" value="indore"/> 
+
+</bean>
+</beans> 
